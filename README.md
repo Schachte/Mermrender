@@ -12,6 +12,9 @@ Check out this awesome guide for setting up diagram rendering within VSCode: htt
 
 > Github doesn't support rendering Mermaid diagrams in their Markdown editor. Mermaid is a powerful tool that uses a well-defined schema to then interpret diagrams into an SVG. The idea of this tool is to allow embedding images dynamically via a REST endpoint to add UML/Sequence diagrams into your documentation/readmes/markdown files easily, whether the editor supports Mermaid or not. 
 
+### Demo
+![demo](https://github.com/Schachte/Mermrender/blob/master/demogif.gif)
+
 ### Usage
 
 #### 1) Generate the diagram code
