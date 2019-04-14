@@ -8,6 +8,8 @@ Credit: https://mermaidjs.github.io/
 ### Setup in VSCode
 Check out this awesome guide for setting up diagram rendering within VSCode: https://quintussential.com/archive/2017/12/10/Diagraming-with-Mermaid/
 
+![](localhost:3000/diagram/c2VxdWVuY2VEaWFncmFtDQogICAgcGFydGljaXBhbnQgQWxpY2UNCiAgICBwYXJ0aWNpcGFudCBCb2INCiAgICBBbGljZS0-PkpvaG46IEhlbGxvIEpvaG4sIGhvdyBhcmUgeW91Pw0KICAgIGxvb3AgSGVhbHRoY2hlY2sNCiAgICAgICAgSm9obi0-PkpvaG46IEZpZ2h0IGFnYWluc3QgaHlwb2Nob25kcmlhDQogICAgZW5kDQogICAgTm90ZSByaWdodCBvZiBKb2huOiBSYXRpb25hbCB0aG91Z2h0cyA8YnIvPnByZXZhaWwuLi4NCiAgICBKb2huLS0-PkFsaWNlOiBHcmVhdCENCiAgICBKb2huLT4-Qm9iOiBIb3cgYWJvdXQgeW91Pw0KICAgIEJvYi0tPj5Kb2huOiBKb2xseSBnb29kIQ)
+
 ### Motivation 
 
 > Github doesn't support rendering Mermaid diagrams in their Markdown editor. Mermaid is a powerful tool that uses a well-defined schema to then interpret diagrams into an SVG. The idea of this tool is to allow embedding images dynamically via a REST endpoint to add UML/Sequence diagrams into your documentation/readmes/markdown files easily, whether the editor supports Mermaid or not. 
