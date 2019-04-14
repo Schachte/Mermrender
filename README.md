@@ -34,14 +34,14 @@ Send a `POST` request to `localhost:3000/encode` with a `diagram` key in the bod
 Example Body:
 ```
 {
-"diagram": "sequenceDiagram\r\n    participant Alice\r\n    participant Bob\r\n    Alice->>John: Hello John, how are you?\r\n    loop Healthcheck\r\n        John->>John: Fight against hypochondria\r\n    end\r\n    Note right of John: Rational thoughts <br/>prevail...\r\n    John-->>Alice: Great!\r\n    John->>Bob: How about you?\r\n    Bob-->>John: Jolly good!"
+  "diagram": "sequenceDiagram\r\n    participant Alice\r\n    participant Bob\r\n    Alice->>John: Hello John, how are you?\r\n    loop Healthcheck\r\n        John->>John: Fight against hypochondria\r\n    end\r\n    Note right of John: Rational thoughts <br/>prevail...\r\n    John-->>Alice: Great!\r\n    John->>Bob: How about you?\r\n    Bob-->>John: Jolly good!"
 }
 ```
 
 This will generate a respose:
 ```
 {
-    "embed_link": "http://localhost:3000/diagram/2VxdWVuY2VEaWF"
+  "embed_link": "http://localhost:3000/diagram/2VxdWVuY2VEaWF"
 }
 ```
 You can embed the following `embed_link` by using the following syntax:
