@@ -5,6 +5,9 @@ RESTful rendering pipeline for generating sequence and UML diagrams using Mermai
 ![Mermaid](https://mermaidjs.github.io/images/header.png)
 Credit: https://mermaidjs.github.io/
 
+### Setup in VSCode
+Check out this awesome guide for setting up diagram rendering within VSCode: https://quintussential.com/archive/2017/12/10/Diagraming-with-Mermaid/
+
 ### Motivation 
 
 > Github doesn't support rendering Mermaid diagrams in their Markdown editor. Mermaid is a powerful tool that uses a well-defined schema to then interpret diagrams into an SVG. The idea of this tool is to allow embedding images dynamically via a REST endpoint to add UML/Sequence diagrams into your documentation/readmes/markdown files easily, whether the editor supports Mermaid or not. 
