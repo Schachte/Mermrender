@@ -34,4 +34,10 @@ We will simply issue a get with this information embedded in the URL `http://loc
 The server will return a `png` that you can directly embed into your README:
 ![](https://i.imgur.com/6VG2JWc.png)
 
+### Additional Options
+Add the following optional query parameters to add custom dimensions to your images:
+
+`http://localhost:5555/mermaid/render?width=500&height=300&...`
+
+The dimension units will be assumed as pixels. 
 
