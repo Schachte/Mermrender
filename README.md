@@ -45,11 +45,15 @@ This will generate a respose:
 }
 ```
 You can embed the following `embed_link` by using the following syntax:
-```
-Markdown: ![alt_caption](http://localhost:3000/diagram/2VxdWVuY2VEaWF)
-HTML: <img src="http://localhost:3000/diagram/2VxdWVuY2VEaWF"/>
-BBCode (Forums): [img]http://localhost:3000/diagram/2VxdWVuY2VEaWF[/img]
-```
+
+#### Markdown
+`![alt_caption](http://localhost:3000/diagram/2VxdWVuY2VEaWF)`
+
+#### HTML
+`<img src="http://localhost:3000/diagram/2VxdWVuY2VEaWF"/>`
+
+#### BBCode (Forums)
+`[img]http://localhost:3000/diagram/2VxdWVuY2VEaWF[/img]`
 
 ![](https://i.imgur.com/6VG2JWc.png)
 
