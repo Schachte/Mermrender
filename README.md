@@ -1,6 +1,6 @@
 # Mermaid-Renderer
 
-RESTful rendering pipeline for generating sequence and UML diagrams using Mermaid. 
+RESTful rendering pipeline for generating sequence and UML diagrams using Mermaid to embed in Github readmes, Markdown docs and more!
 
 ![Mermaid](https://mermaidjs.github.io/images/header.png)
 Credit: https://mermaidjs.github.io/
