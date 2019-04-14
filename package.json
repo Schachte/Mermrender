@@ -1,0 +1,32 @@
+{
+  "name": "mermrender",
+  "version": "1.0.0",
+  "description": "RESTful rendering pipeline for generating sequence and UML diagrams using Mermaid to embed in Github readmes, Markdown docs and more!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schachte/Mermrender.git"
+  },
+  "keywords": [
+    "mermaid.js"
+  ],
+  "author": "Ryan Schachte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Schachte/Mermrender/issues"
+  },
+  "homepage": "https://github.com/Schachte/Mermrender#readme",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "base64url": "^3.0.1",
+    "btoa": "^1.2.1",
+    "convert-svg-to-png": "^0.5.0",
+    "express": "^4.16.4",
+    "mermaid": "^7.1.0",
+    "mermaid.cli": "^0.5.1",
+    "unique-filename": "^1.1.1"
+  }
+}
