@@ -28,7 +28,7 @@ sequenceDiagram
 #### 2) Escape the diagram to encode it
 Next, you need to run it through an escaper like the following: https://www.freeformatter.com/java-dotnet-escape.html#ad-output
 
-#### 3) Encode the escaped diagram
+#### 3) Generate the image link to embed
 Send a `POST` request to `localhost:3000/encode` with a `diagram` key in the body with the above escaped diagram:
 
 Example Body:
@@ -41,15 +41,16 @@ Example Body:
 This will generate a respose:
 ```
 {
-"encoded_diagram": "c2VxdWVuY2VEaWFncmFtDQogICAgcGFydGljaXBhbnQgQWxpY2UNCiAgICBwYXJ0aWNpcGFudCBCb2INCiAgICBBbGljZS0-PkpvaG46IEhlbGxvIEpvaG4sIGhvdyBhcmUgeW91Pw0KICAgIGxvb3AgSGVhbHRoY2hlY2sNCiAgICAgICAgSm9obi0-PkpvaG46IEZpZ2h0IGFnYWluc3QgaHlwb2Nob25kcmlhDQogICAgZW5kDQogICAgTm90ZSByaWdodCBvZiBKb2huOiBSYXRpb25hbCB0aG91Z2h0cyA8YnIvPnByZXZhaWwuLi4NCiAgICBKb2huLS0-PkFsaWNlOiBHcmVhdCENCiAgICBKb2huLT4-Qm9iOiBIb3cgYWJvdXQgeW91Pw0KICAgIEJvYi0tPj5Kb2huOiBKb2xseSBnb29kIQ"
+    "embed_link": "http://localhost:3000/diagram/2VxdWVuY2VEaWF"
 }
 ```
+You can embed the following `embed_link` by using the following syntax:
+```
+Markdown: ![alt_caption](http://localhost:3000/diagram/2VxdWVuY2VEaWF)
+HTML: <img src="http://localhost:3000/diagram/2VxdWVuY2VEaWF"/>
+BBCode (Forums): [img]http://localhost:3000/diagram/2VxdWVuY2VEaWF[/img]
+```
 
-#### 4) Generate the image link to embed
-
-`http://localhost:3000/diagram/c2VxdWVuY2VEaWFncmFtDQogICAgcGFydGljaXBhbnQgQWxpY2UNCiAgICBwYXJ0aWNpcGFudCBCb2INCiAgICBBbGljZS0-PkpvaG46IEhlbGxvIEpvaG4sIGhvdyBhcmUgeW91Pw0KICAgIGxvb3AgSGVhbHRoY2hlY2sNCiAgICAgICAgSm9obi0-PkpvaG46IEZpZ2h0IGFnYWluc3QgaHlwb2Nob25kcmlhDQogICAgZW5kDQogICAgTm90ZSByaWdodCBvZiBKb2huOiBSYXRpb25hbCB0aG91Z2h0cyA8YnIvPnByZXZhaWwuLi4NCiAgICBKb2huLS0-PkFsaWNlOiBHcmVhdCENCiAgICBKb2huLT4-Qm9iOiBIb3cgYWJvdXQgeW91Pw0KICAgIEJvYi0tPj5Kb2huOiBKb2xseSBnb29kIQ`
-
-The server will return a `png` that you can directly embed into your README:
 ![](https://i.imgur.com/6VG2JWc.png)
 
 ### Additional Options
