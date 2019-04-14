@@ -18,35 +18,41 @@ const endpointUtil = require("./libs/endpointUtil");
 app.use(express.json());
 
 app.get("/diagram/:diagram", async (req, res) => {
-  let graphDefinition = base64url.decode(req.params.diagram);
+  const img = fs.readFileSync(`/tmp/${req.params.diagram}.png`);
+  res.writeHead(200, { "Content-Type": "image/png" });
+  res.end(img, "binary");
+});
 
-  const randomTmpFile = (await uniqueFilename("/tmp", "tmp-mmd")) + ".mmd";
+app.post("/encode", async (req, res) => {
+  let graphDefinition = req.body.diagram;
 
-  // Add to endpointUtil
-  fs.writeFile(randomTmpFile, graphDefinition, function(err) {
+  const randomTmpFile = `${base64url
+    .encode(req.body.diagram)
+    .substring(1, 15)}`;
+
+  // Add option to check for cached images
+  fs.writeFileSync("/tmp/" + randomTmpFile + ".mmd", graphDefinition, function(
+    err
+  ) {
     if (err) {
       return console.log(err);
     }
   });
 
-  // Add to MermaidUtil
-  // mmdc -i input.mmd -o output.svg -w 1024 -H 768
-  exec(
-    `./node_modules/.bin/mmdc -i ${randomTmpFile} -o ${randomTmpFile}.png -b transparent`,
+  // todo: add dimension options mmdc -i input.mmd -o output.svg -w 1024 -H 768
+  await exec(
+    `./node_modules/.bin/mmdc -i /tmp/${randomTmpFile}.mmd -o /tmp/${randomTmpFile}.png -b transparent`,
     function callback(error, stdout, stderr) {
       if (error) {
         console.log("There was an error processing the output file");
       }
     }
   );
-  res.json({ same: "" });
-});
 
-app.post("/encode", (req, res) => {
-  console.log(req.body.diagram);
-  console.log(base64url.encode(req.body.diagram));
-  console.log(base64url.decode(base64url.encode(req.body.diagram)));
-  res.json({ encoded_diagram: base64url.encode(req.body.diagram) });
+  // TODO: Make hostname dynamic
+  res.json({
+    embed_link: `http://localhost:3000/diagram/${randomTmpFile}`
+  });
 });
 
 app.listen(process.env.PORT || 3000);
