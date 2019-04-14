@@ -1,4 +1,4 @@
-# Mermaid-Renderer
+# 🧜‍♀️ Mermrender
 
 RESTful rendering pipeline for generating sequence and UML diagrams using Mermaid to embed in Github readmes, Markdown docs and more!
 
