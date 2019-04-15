@@ -3,6 +3,7 @@
 RESTful rendering pipeline for generating sequence and UML diagrams using Mermaid to embed in Github readmes, Markdown docs and more! Mermrender uses Mermaid.JS and Mermaid CLI under the hood. 
 
 > Feel free to contribute by making a pull request!
+
 > Contact: code@ryan-schachte.com
 
 ![Mermaid](https://mermaidjs.github.io/images/header.png)
