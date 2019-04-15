@@ -63,7 +63,5 @@ You can embed the following `embed_link` by using the following syntax:
 ### Additional Options
 Add the following optional query parameters to add custom dimensions to your images:
 
-`http://localhost:5555/mermaid/render?width=500&height=300&...`
-
-The dimension units will be assumed as pixels. 
+(Not yet implemented)
 
