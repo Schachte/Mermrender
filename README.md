@@ -19,13 +19,31 @@ Check out this awesome guide for setting up diagram rendering within VSCode: htt
 
 ### Usage
 
-#### 1) Generate the diagram code
+#### 1) Generate the diagram code with Mermaid OR PlantUML
 ```
 sequenceDiagram
     participant A as Alice
     participant J as John
     A->>J: Hello John, how are you?
     J->>A: Great!
+```
+or 
+```
+@startuml
+object Object01
+object Object02
+object Object03
+object Object04
+object Object05
+object Object06
+object Object07
+object Object08
+
+Object01 <|-- Object02
+Object03 *-- Object04
+Object05 o-- "4" Object06
+Object07 .. Object08 : some labels
+@enduml
 ```
 
 > You can edit and render them live on this website: https://mermaidjs.github.io/mermaid-live-editor/
@@ -34,7 +52,7 @@ sequenceDiagram
 Next, you need to run it through an escaper like the following: https://www.freeformatter.com/java-dotnet-escape.html#ad-output
 
 #### 3) Generate the image link to embed
-Send a `POST` request to `localhost:3000/encode` with a `diagram` key in the body with the above escaped diagram:
+Send a `POST` request to `http://localhost:3000/encode/plantuml` or `http://localhost:3000/encode/mermaid` depending on the type with a `diagram` key in the body with the above escaped diagram:
 
 Example Body:
 ```
