@@ -4,7 +4,7 @@ RESTful rendering pipeline for generating sequence and UML diagrams using Mermai
 
 > Feel free to contribute by making a pull request!
 
-> Contact: code@ryan-schachte.com
+> Maintainer: code@ryan-schachte.com
 
 ![Mermaid](https://mermaidjs.github.io/images/header.png)
 Credit: https://mermaidjs.github.io/
