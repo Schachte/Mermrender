@@ -30,7 +30,7 @@ app.post("/encode/mermaid", async (req, res) => {
   const randomTmpFile = endpointUtil.generateFileName(graphDefinition);
 
   endpointUtil.writeFile(randomTmpFile, graphDefinition, ".mmd");
-  mermaidUtil.generateImage(randomTmpFile);
+  await mermaidUtil.generateImage(randomTmpFile);
 
   res.json({
     embed_link: `http://${req.headers.host}/diagram/${randomTmpFile}`,
@@ -42,7 +42,7 @@ app.post("/encode/mermaid", async (req, res) => {
 app.post("/encode/plantuml", async (req, res) => {
   const graphDefinition = req.body.diagram;
   const randomTmpFile = endpointUtil.generateFileName(req.body.diagram);
-  await endpointUtil.writeFile(randomTmpFile, graphDefinition, ".puml");
+  endpointUtil.writeFile(randomTmpFile, graphDefinition, ".puml");
   await plantUmlUtil.generateImage(randomTmpFile);
 
   res.json({
