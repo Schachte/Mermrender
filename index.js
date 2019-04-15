@@ -9,6 +9,7 @@ const express = require("express");
 const app = express();
 const base64url = require("base64url");
 const fs = require("fs");
+const os = require("os");
 
 const endpointUtil = require("./libs/endpointUtil");
 const mermaidUtil = require("./libs/mermaidUtil");
@@ -28,9 +29,8 @@ app.post("/encode", async (req, res) => {
   endpointUtil.writeFile(randomTmpFile, graphDefinition);
   mermaidUtil.generateImage(randomTmpFile);
 
-  // TODO: Make hostname dynamic
   res.json({
-    embed_link: `http://localhost:3000/diagram/${randomTmpFile}`
+    embed_link: `http://${req.headers.host}/diagram/${randomTmpFile}`
   });
 });
 
