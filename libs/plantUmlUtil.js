@@ -9,7 +9,6 @@ const exec = require("child_process").exec;
 
 module.exports = {
   generateImage: async function(randomTmpFile) {
-    // TODO: add dimension options mmdc -i input.mmd -o output.svg -w 1024 -H 768
     await exec(
       `puml generate /tmp/${randomTmpFile}.puml -o /tmp/${randomTmpFile}.png`,
       function callback(error, stdout, stderr) {
