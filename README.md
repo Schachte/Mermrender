@@ -91,7 +91,7 @@ Add the following optional query parameters to add custom dimensions to your ima
 
 1) `npm i` to install dependencies
 2) `node index.js`
-3) `sudo npm install node-plantuml -g`
+3) `sudo npm install -g node-plantuml`
 4) `sudo npm install -g mermaid.cli`
 
 
