@@ -18,15 +18,18 @@ module.exports = {
   base64Encode: function(decodedString) {
     return btoa(decodedString);
   },
+  base64UrlEncodedDecode: function(urlEncodedString) {
+    return base64url.decode(urlEncodedString);
+  },
   validateBase64: function(encodedString) {
     return base64regex.test(encodedString);
   },
   generateFileName(name) {
     return `${base64url.encode(name).substring(1, 15)}`;
   },
-  writeFile: function(randomTmpFile, graphDefinition) {
+  writeFile: function(randomTmpFile, graphDefinition, extension) {
     fs.writeFileSync(
-      "/tmp/" + randomTmpFile + ".mmd",
+      "/tmp/" + randomTmpFile + extension,
       graphDefinition,
       function(err) {
         if (err) {
