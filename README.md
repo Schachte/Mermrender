@@ -65,3 +65,9 @@ Add the following optional query parameters to add custom dimensions to your ima
 
 (Not yet implemented)
 
+# How To Run
+
+1) `npm i` to install dependencies
+2) `node index.js`
+
+
