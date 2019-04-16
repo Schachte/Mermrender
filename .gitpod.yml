@@ -1,0 +1,18 @@
+image:
+  file: .gitpod.dockerfile
+ports:
+- port: 3000
+  onOpen: ignore
+tasks:
+- name: Mermrender
+  before: npm install -g node-plantuml mermaid.cli
+  init: npm install
+  command: node index.js
+- name: Demo
+  openMode: split-right
+  command: >
+    gp open examples/mermaid.mmd ;
+    EMBED_LINK="" ; while [ -z "${EMBED_LINK:=$(curl -sS --request POST --header "Content-Type: application/json" --data "{ \"diagram\": $(jq -Rs '.' examples/mermaid.mmd) }" http://localhost:3000/encode/mermaid)}" ] ; \
+        do sleep 5 && printf "\nPosting example to http://localhost:3000/encode/mermaid ...\n" ; \
+    done ;
+    sleep 5 && gp preview $(printf "$EMBED_LINK" | jq -r ".embed_link" | sed "s_http://localhost:3000/_$(gp url 3000)_")
