@@ -9,6 +9,10 @@ RESTful rendering pipeline for generating sequence and UML diagrams using Mermai
 ![Mermaid](https://mermaidjs.github.io/images/header.png)
 Credit: https://mermaidjs.github.io/
 
+Run Mermrender in Gitpod, a free online dev environment for GitHub:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Schachte/Mermrender)
+
 ### Setup in VSCode
 Check out this awesome guide for setting up diagram rendering within VSCode: https://quintussential.com/archive/2017/12/10/Diagraming-with-Mermaid/
 
