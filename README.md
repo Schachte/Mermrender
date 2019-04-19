@@ -13,6 +13,10 @@ Run Mermrender in Gitpod, a free online dev environment for GitHub:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Schachte/Mermrender)
 
+### Hit the API! (Demo)
+
+![img](http://3000-cebcfedc-d281-4f38-b13a-cc6312da177b.ws-us0.gitpod.io/diagram/3JhcGggVEINCiA)
+
 ### Setup in VSCode
 Check out this awesome guide for setting up diagram rendering within VSCode: https://quintussential.com/archive/2017/12/10/Diagraming-with-Mermaid/
 
